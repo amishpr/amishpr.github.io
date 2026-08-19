@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build scratch (prerender's server bundle, deleted after each build)
+.ssr/
+# docs/ is the built site that GitHub Pages serves. Keep it committed.
+
+# Files moved out of the site (mockups, planning docs, original images). Local only;
+# delete this line to commit them.
+CLEAN-UP/
+
+# Logs and caches
+*.log
+npm-debug.log*
+.npm/
+.cache/
+*.tsbuildinfo
+
+# Environment files (never commit secrets)
+.env
+.env.*
+
+# OS and editor files. .vscode/ settings shared with the repo stay tracked.
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
