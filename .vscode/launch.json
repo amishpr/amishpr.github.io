@@ -1,0 +1,13 @@
+{
+  // Run and Debug panel (F5). "Dev server + Chrome" starts Vite and opens a debuggable Chrome.
+  "version": "0.2.0",
+  "configurations": [
+    { "name": "Dev server", "type": "node-terminal", "request": "launch", "command": "npm run dev" },
+    { "name": "Chrome: localhost:5173", "type": "chrome", "request": "launch", "url": "http://localhost:5173", "webRoot": "${workspaceFolder}" },
+    { "name": "Preview built site (docs/)", "type": "node-terminal", "request": "launch", "command": "npm run build && npm run preview" },
+    { "name": "Tests", "type": "node-terminal", "request": "launch", "command": "npm test" }
+  ],
+  "compounds": [
+    { "name": "Dev server + Chrome", "configurations": ["Dev server", "Chrome: localhost:5173"], "stopAll": true }
+  ]
+}
