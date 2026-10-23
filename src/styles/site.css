@@ -230,6 +230,28 @@ footer { border-top: 1px solid var(--line); padding: 22px 0 36px; font-size: 13.
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; }
 footer a { text-decoration: none; }
 
+/* Phone speed: below 760px the browser skips layout for the heavy blocks (the five apps, the charts, the project
+   grid) until they near the screen, which cuts main-thread time on a throttled phone by about a third.
+   Phones only on purpose: the nav links are hidden below 760px. On wider screens a nav link would jump past
+   unrendered blocks and land off target, since the sizes below are estimates of each block's height (inside
+   its padding). `auto` remembers the real height once a block has rendered. */
+@media (max-width: 760px) {
+  .role, .charts, .bento { content-visibility: auto; }
+  /* Skipped blocks clip anything that spills outside them. So each role reaches the screen edges (the app's
+     shadow spills into the side margin) with its divider kept at the content width, and the project grid
+     gets room for its cards' slide-in. With these, the page looks exactly as it does without skipping. */
+  .role { margin-inline: calc(-1 * var(--pad)); padding-inline: var(--pad); }
+  .role + .role { border-top: 0; background: linear-gradient(var(--line), var(--line)) var(--pad) 0 / calc(100% - 2 * var(--pad)) 1px no-repeat; }
+  .bento { padding-block: 16px; margin-block: -16px; }
+  .role { contain-intrinsic-size: auto 1050px; }
+  .charts { contain-intrinsic-size: auto 690px; }
+  .bento { contain-intrinsic-size: auto 1300px; }
+}
+@media (max-width: 620px) {
+  .role { contain-intrinsic-size: auto 1150px; }
+  .bento { contain-intrinsic-size: auto 1550px; }
+}
+
 /* Hidden only when JS runs (the head script adds .js), so crawlers and no-JS visitors always see the text. */
 .js [data-reveal] { opacity: 0; transform: translateY(16px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: calc(var(--i, 0) * 70ms); }
 .js [data-reveal].is-in { opacity: 1; transform: none; }
