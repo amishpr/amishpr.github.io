@@ -1,4 +1,4 @@
-# amishprajapati.com / amishpr.com
+# amishprajapati.com / amishp.com
 
 Personal site for Amish Prajapati. React 19 + Vite + TypeScript, prerendered to static HTML and hosted on GitHub Pages. 
 
