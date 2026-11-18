@@ -362,10 +362,10 @@ const content: Content = {
      image: "/images/name.webp" (1280x800 works best; `npm run webp` converts a .jpg or .png), or "" for none. url and repo can be "". */
   projects: [
     {
-      name: "Jangal Family Tree",
-      url: "https://amishpr-family-tree.vercel.app/",
-      repo: "https://github.com/amishpr/family-tree",
-      image: "/images/family-tree.webp",
+      name: "Jangal - The Family Forest",
+      url: "https://jangal-family-forest.vercel.app/",
+      repo: "https://github.com/amishpr/jangal-family-forest",
+      image: "/images/jangal.webp",
       featured: true,
       description:
         "A family tree app that runs entirely in the browser. It names every relationship in plain words, including Gujarati and Hindi family titles, and exports to a poster PDF, GEDCOM, or a shareable offline page.",
