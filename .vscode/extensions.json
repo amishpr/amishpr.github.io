@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    // TypeScript 7 language service. The project builds with TypeScript 7, which has no classic tsserver.
+    "TypeScriptTeam.native-preview",
+    // Catches typos in content.ts before they reach the site.
+    "streetsidesoftware.code-spell-checker"
+  ]
+}
