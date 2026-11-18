@@ -1,7 +1,6 @@
-# amishprajapati.com
+# amishprajapati.com / amishpr.com
 
-Personal site for Amish Prajapati. React 19 + Vite + TypeScript, prerendered to static HTML
-and hosted on GitHub Pages. Design: mockup 21f Emerald (`CLEAN-UP/mockups/21f-emerald.html`).
+Personal site for Amish Prajapati. React 19 + Vite + TypeScript, prerendered to static HTML and hosted on GitHub Pages. 
 
 ## Change the content
 
@@ -49,22 +48,6 @@ so it is right even if you forgot to run `npm run build` first.
 `docs/` is also committed, so the repo always holds a copy of the built site. Run
 `npm run build` before committing to keep it current. Don't edit `docs/` by hand; the
 next build overwrites it (VS Code opens it read-only).
-
-### One-time switch from the old site
-
-The live site is still the old Next.js export, served straight from `master`. In this order:
-
-1. On GitHub: **Settings > Pages > Build and deployment > Source: GitHub Actions**.
-   The old site stays up until the first new deploy. Check that **Custom domain** still
-   says `amishprajapati.com` (with Actions deploys, that setting is what counts, not the `CNAME` file).
-2. Merge this branch into `master` and push. The workflow deploys within a couple of minutes;
-   watch it under the repo's **Actions** tab.
-
-### After it is live
-
-- Google Search Console: add `amishprajapati.com` (DNS verification) and submit
-  `https://amishprajapati.com/sitemap.xml`.
-- Check the link preview with LinkedIn's Post Inspector.
 
 ## How it works
 
