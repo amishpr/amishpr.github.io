@@ -104,20 +104,12 @@ function Work() {
 }
 
 function Projects() {
-  /* First featured = lead tile, next two featured = side tiles, everything else shares the bottom row. */
-  const featured = C.projects.filter((p) => p.featured).slice(0, 3);
-  const rest = C.projects.filter((p) => !featured.includes(p));
-  const span = 6 / Math.min(Math.max(rest.length, 1), 3);
-  const tiles = [
-    ...featured.map((p, i) => ({ p, cls: i ? "p-side" : "p-lead", style: {} })),
-    ...rest.map((p, i) => ({ p, cls: `p-compact${i % 2 ? " alt" : ""}`, style: { "--span": span } })),
-  ];
   return (
     <section className="sec wrap" id="projects">
       <Head s={S.projects} />
       <div className="bento">
-        {tiles.map(({ p, cls, style }, i) => (
-          <article className={`proj ${cls}`} data-reveal style={vars({ "--i": i, ...style })} key={p.name}>
+        {C.projects.map((p, i) => (
+          <article className="proj" data-reveal style={vars({ "--i": i })} key={p.name}>
             {p.image && <div className="proj-shot"><img src={p.image} alt={`Screenshot of ${p.name}`} width={1280} height={800} loading="lazy" decoding="async" /></div>}
             <div className="proj-body">
               <h3>{p.name}</h3>
