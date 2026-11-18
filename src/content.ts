@@ -362,6 +362,16 @@ const content: Content = {
      image: "/images/name.webp" (1280x800 works best; `npm run webp` converts a .jpg or .png), or "" for none. url and repo can be "". */
   projects: [
     {
+      name: "Jangal Family Tree",
+      url: "https://amishpr-family-tree.vercel.app/",
+      repo: "https://github.com/amishpr/family-tree",
+      image: "/images/family-tree.webp",
+      featured: true,
+      description:
+        "A family tree app that runs entirely in the browser. It names every relationship in plain words, including Gujarati and Hindi family titles, and exports to a poster PDF, GEDCOM, or a shareable offline page.",
+      tags: ["React", "TypeScript", "React Flow", "Zustand"],
+    },
+    {
       name: "Retirement Investing Dashboard",
       url: "https://amishpr-retirement-dashboard.netlify.app/",
       repo: "https://github.com/amishpr/retirement-dashboard",
@@ -390,15 +400,6 @@ const content: Content = {
       description:
         "A small core banking system on a double-entry ledger. Every transaction balances, money is stored as integers, and retried requests never post twice.",
       tags: ["Node", "TypeScript", "Prisma", "React"],
-    },
-    {
-      name: "Kinna's Kitchen",
-      url: "",
-      repo: "https://github.com/amishpr/kinnas-kitchen",
-      image: "",
-      featured: false,
-      description: "Restaurant ordering app with customer accounts and Stripe payments.",
-      tags: ["React", "GraphQL", "Strapi", "MongoDB", "Stripe"],
     },
   ],
 
