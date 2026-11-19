@@ -431,9 +431,9 @@ const content: Content = {
 
   interests: [
     { title: "My dogs", body: "Most evenings start with a long walk." },
-    { title: "Fantasy and sci-fi", body: "The Stormlight Archive and The Expanse are favorites." },
-    { title: "Kirby games", body: "Super Star Ultra and Planet Robobot are always worth replaying." },
-    { title: "National parks", body: "I collect a Junior Ranger badge at every park I visit with my partner." },
+    { title: "Fantasy and sci-fi", body: "The Stormlight Archive and The Expanse are my favorites." },
+    { title: "Kirby games", body: "Super Star Ultra and Planet Robobot are always worth replaying!" },
+    { title: "National parks", body: "I collect a Junior Ranger badge at every National or State Park I visit with my partner." },
   ],
 
   contact: {
