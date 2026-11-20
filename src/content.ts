@@ -68,7 +68,7 @@ const content: Content = {
     projects: {
       nav: "Projects",
       heading: "Projects",
-      intro: "Side projects about money and markets. The first three are live.",
+      intro: "Side projects about money, markets, and random curiosities.",
     },
     skills: { heading: "Skills" },
     about: { nav: "About", heading: "About" },
@@ -441,7 +441,7 @@ const content: Content = {
     body: "I'm looking for software engineering roles in financial systems, Python and SQL, data pipelines, and production support around New York City.",
   },
 
-  footer: { note: "Figures are approximate and come from the resume." },
+  footer: { note: "" },
 };
 
 export default content;
